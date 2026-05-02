@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eco-Track</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../style.css" />
+
+    <!-- TAILWIND -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- REMIX ICONS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- IONICONS -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+     <!-- NAVBAR -->
+    <nav id="navbar" class="navbar w-full bg-white sticky top-0 z-50">
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6"
+      >
+        <!-- LOGO -->
+        <div class="logo text-xl md:text-2xl font-bold text-[#064E3B]">
+          <h1>Eco-Track</h1>
+        </div>
+
+        <!-- LOGIN -->
+        <div class="login text-[12px] md:text-[15px]">
+          <a href="#" class="px-4 py-2 font-semibold">Login</a>
+          <a
+            href="#"
+            class="px-4 md:px-6 py-2 rounded-lg font-semibold bg-[#2D5A27] text-white"
+            >Get Started</a
+          >
+        </div>
+
+      </div>
+    </nav>
+
+    <main>
+        <section id="calculator" class="w-full bg-[#F8FAF7] py-8">
+        <div
+          class="max-w-7xl px-6 mx-auto">
+          <!-- TOMBOL BACK   -->
+          <button onclick="window.history.back()" class="flex font-semibold hover:font-bold items-center gap-1 text-md cursor-pointer text-[#154212] mb-5">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+            Back
+          </button>
+
+          <h1 class="text-3xl font-bold text-[#154212] tracking-wide text-center md:text-left">
+            Carbon Calculator
+          </h1>
+          <p class="text-md font-light mt-3 text-center md:text-left text-[#42493E]">
+            Measure your daily footprint and take actionable steps toward environmental<br> 
+            stewardship. Every small change contributes to a healthier planet.
+          </p>
+
+          <div class="flex flex-col md:flex-row mx-auto gap-5 mt-8">
+            <!-- LEFT COLUMN -->
+            <div class="flex flex-col gap-5 w-full md:w-1/2">
+              <!-- TRANSPORTASI -->
+              <div class="border w-full mx-auto border-gray-200 p-8 rounded-md bg-white">
+                 <!-- LOGO -->
+                <div class="flex gap-3">
+                     <div class="rounded-md bg-[#91F78E] py-[5px] px-[9px]">
+                        <ion-icon name="car-outline" class="text-xl"></ion-icon>
+                     </div>
+                     <h1 class="text-xl font-semibold text-[#154212]">Transportation</h1>
+                </div>
+
+                <!-- INPUT -->
+                <div class="mb-4"> 
+                    <label class="block text-[11px] mt-5 uppercase font-semibold text-[#42493E] tracking-widest">
+                    distance traveled (km)</label>
+                    <input type="number" id="jarak" placeholder="Enter Distance"
+                     class="w-full rounded-md border mt-1 border-[#C2C9BB] bg-[#F2F4F1] px-4 py-3 text-sm text-gray-700">
+                </div>
+
+                <div>
+                    <label class="block text-[11px] font-bold text-[#42493E] uppercase tracking-widest mb-2">Vehicle Type</label>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <label class="flex-1 cursor-pointer">
+                            <input type="radio" id="motor" name="vehicle" value="motor" class="peer hidden" checked>         
+                            <div class="bg-white border border-gray-300 text-gray-600 hover:bg-gray-50 rounded-[12px] py-2 flex items-center justify-center gap-2 text-sm font-medium transition-colors peer-checked:bg-[#2D5A27] peer-checked:text-white peer-checked:border-[#2D5A27] peer-checked:hover:bg-[#2D5A27]">
+                                <i class="ri-motorbike-fill text-lg"></i>
+                                Motor
+                            </div>
+                            </label>
+                            <label class="flex-1 cursor-pointer">
+                            <input type="radio" id="mobil" name="vehicle" value="mobil" class="peer hidden"> 
+                                <div class="bg-white border border-gray-300 text-gray-600 hover:bg-gray-50 rounded-[12px] py-2 flex items-center justify-center gap-2 text-sm font-medium transition-colors peer-checked:bg-[#2D5A27] peer-checked:text-white peer-checked:border-[#2D5A27] peer-checked:hover:bg-[#2D5A27]">
+                                <i class="ri-car-line text-lg"></i>
+                                Mobil
+                                </div>
+                            </label>
+                        </div>
+                </div>
+              </div>
+
+              <!-- ENERGY USAGE -->
+              <div class="border w-full h-auto mx-auto border-gray-200 p-8 rounded-md bg-white">
+                 <!-- LOGO -->
+                <div class="flex gap-3">
+                     <div class="rounded-md bg-[#FFDBCE] py-[5px] px-[9px]">
+                        <ion-icon name="flash-outline" class="text-xl"></ion-icon>
+                     </div>
+                     <h1 class="text-xl font-semibold text-[#154212]">Energy Usage</h1>
+                </div>
+                
+                <!-- INPUT -->
+                <div class="mb-4 gap-2 flex"> 
+                    <div>
+                    <label class="block text-[11px] mt-5 uppercase font-semibold text-[#42493E] tracking-widest">
+                    ac hours/day</label>
+                    <input type="number" id="durasi-ac" placeholder="0"
+                     class="w-full rounded-md border mt-1 border-[#C2C9BB] bg-[#F2F4F1] px-4 py-3 text-sm text-gray-700">
+                    </div>
+
+                    <div>
+                     <label class="block text-[11px] mt-5 uppercase font-semibold text-[#42493E] tracking-widest">
+                    laptop hours/day</label>
+                    <input type="number" id="durasi-laptop" placeholder="0"
+                     class="w-full rounded-md border mt-1 border-[#C2C9BB] bg-[#F2F4F1] px-4 py-3 text-sm text-gray-700">
+                    </div>
+                </div>
+              </div>
+              <!-- BUTTONS SUBMIT -->
+              <div class="flex gap-4 items-center">
+                <button
+                  id="btn-calculate"
+                  type="button"
+                  class="flex bg-[#2D5A27] text-white font-regular tracking-wide py-3 w-full rounded-full 
+                  items-center justify-center gap-2 cursor-pointer transition-all duration-300 
+                  ease-in-out hover:-translate-y-1 hover:scale-103"
+                >
+                  <span>Calculate</span>
+                  <i class="ri-line-chart-line text-lg"></i>
+                </button>
+                
+                <button
+                  type="reset"
+                  id="btn-reset"
+                  class="flex items-center gap-2 px-6 py-3 cursor-pointer text-[#42493E] w-full font-semibold hover:opacity-70 transition-opacity"
+                >
+                  <i class="ri-restart-line"></i>
+                  <span>Reset</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- IMPACT -->
+            <div id="impact-container" class="border w-full h-full md:w-1/2 mx-auto border-gray-200 p-10 rounded-md bg-[#154212] text-white">
+              <h1 class="text-2xl font-semibold tracking-wide">Your Impact</h1>
+              <p class="text-lg font-light tracking-wide mt-3">Calculate your usage to see your environmental
+              footprint results here.</p>
+
+              
+            <div class="flex flex-col items-center text-center mt-15">    
+            <div id="load-icon" class="flex items-center justify-center w-36 h-36 border-[4px] border-dashed border-white rounded-full">      
+              <div id="circle-result" class="flex items-center justify-center w-12 h-12 border-[2px] border-[#93a788] rounded-full">        
+                <div id="loading-dots" class="flex gap-1">
+                    <div class="w-1.5 h-1.5 bg-[#93a788] rounded-full"></div>
+                    <div class="w-1.5 h-1.5 bg-[#93a788] rounded-full"></div>
+                    <div class="w-1.5 h-1.5 bg-[#93a788] rounded-full"></div>
+                </div>
+              </div>
+            </div>
+            <p id="process" class="mt-8 text-[12px] font-bold tracking-widest text-[#93a788]">
+              AWAITING DATA
+            </p>
+            </div>
+
+            <!-- PROGRESS BAR -->
+             <div class="mt-15 w-full">
+              <div class="w-full h-2 bg-white/20 rounded-full overflow-hidden mt-10">      
+                <div id="progress-bar" class="h-full bg-white rounded-full transition-all duration-500 w-[0%]">
+                </div>
+              </div>
+
+              <div class="flex justify-between items-end mt-2">
+                <span class="text-sm uppercase font-regular"><span id="total-emisi">0</span> KG CO2e</span>
+                <span class="text-sm font-semibold leading-none">DAILY LIMIT: 15 KG</span>
+              </div>
+             </div>
+          </div>
+        </div>
+        </section>
+
+    </main>
+    <!-- FOOTER -->
+    <footer id="footer" class="w-full bg-[#E7E5E4]">
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-3 justify-between py-4 px-6"
+      >
+      <div class="flex-col text-center md:text-left">
+        <h1 class="text-lg font-semibold text-[#065F46] py-[2px]">Eco-Track</h1>
+        <p class="text-sm font-light tracking-wide text-[#78716C]">&copy; 2024 Eco-Track. Stewardship through data.</p>
+      </div>
+
+      <ul class="md:flex hidden md:block gap-4 text-sm text-[#78716C] tracking-wide">
+        <li>
+          <a href="#" class="font-light hover:text-black">Privacy Policy</a>
+        </li>
+
+        <li>
+          <a href="#" class="font-light hover:text-black">Terms of Service</a>
+        </li>
+
+        <li>
+          <a href="#" class="font-light hover:text-black">Contact Us</a>
+        </li>
+
+        <li>
+          <a href="#" class="font-light hover:text-black">Resource</a>
+        </li>
+      </ul>
+
+      <div class="md:flex gap-5 md:gap-3 text-2xl md:text-md text-[#78716C]">
+        <i class="ri-earth-line hover:text-black"></i>
+        <i class="ri-global-line hover:text-black"></i>
+      </div>
+      </div>
+    </footer>
+  
+    <!-- JS EXTERNAL -->
+    <script src="../main.js"></script>
+  </body>
+</html>

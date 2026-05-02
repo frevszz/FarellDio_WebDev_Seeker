@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eco Track</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- TAILWIND -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- REMIX ICONS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- IONICONS -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav id="navbar" class="navbar w-full bg-white sticky top-0 z-50">
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6"
+      >
+        <!-- LOGO -->
+        <div class="logo text-xl md:text-2xl font-bold text-[#064E3B]">
+          <h1>Eco-Track</h1>
+        </div>
+
+        <!-- BUTTON -->
+        <ul class="links md:flex md:z-auto py-8 px-6 md:py-0 md:px-0 text-3xl md:text-base
+        absolute text-center w-full left-0 md:w-auto md:opacity-100 opacity-0 gap-8 md:gap-6 md:static
+        transition-opacity ease-in duration-200">
+          <li class="py-4 md:py-0">
+            <a href="#features" class="hover:text-[#047857] hover:font-semibold text-[#57534E]"
+              >Features</a
+            >
+          </li>
+          <li class="py-4 md:py-0">
+            <a href="#impact" class="hover:text-[#047857] hover:font-semibold text-[#57534E]"
+              >Impact</a
+            >
+          </li>
+          <li class="py-4 md:py-0">
+            <a href="/actionPlan" class="hover:text-[#047857] hover:font-semibold text-[#57534E]"
+              >Action</a
+            >
+          </li>
+          <li class="py-4 md:py-0">
+            <a href="#about" class="hover:text-[#047857] hover:font-semibold text-[#57534E]"
+              >About</a
+            >
+          </li>
+        </ul>
+
+        <!-- LOGIN -->
+        <div class="login text-[12px] md:text-[15px]">
+          <a href="#" class="px-4 py-2 font-semibold">Login</a>
+          <a
+            href="#"
+            class="px-4 md:px-6 py-2 rounded-lg font-semibold bg-[#2D5A27] text-white"
+            >Get Started</a
+          >
+        </div>
+
+        <span class="menu-icon text-2xl cursor-pointer md:hidden block">
+          <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
+        </span class="menu-icon text-2xl cursor-pointer md:hidden">
+      </div>
+    </nav>
+    <main>
+      <!-- HERO -->
+      <section class="hero w-full bg-[#F8FAF7] py-10 md:py-20 h-auto">
+        <div
+          class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 md:mt-20  mb-10 md:mb-20 gap-8"
+        >
+          <div class="text content md:mt-10 text-center md:text-left">
+            <h1
+              class="px-4 py-1 bg-[#91F78E] text-[#047857] text-[13px] md:text-[15px] rounded-full w-max mx-auto md:mx-0"
+            >
+              <i class="ri-leaf-line"></i> PIONEERING SUSTAINABILITY
+            </h1>
+
+            <h1
+              class="heading text-5xl md:text-4xl mt-6 font-bold text-[#064E3B]"
+            >
+              Welcome to Eco-Track: <br />Stewardship Through Data.
+            </h1>
+
+            <p class="text-lg md:text-xl text-[#064E3B] mt-6 md:mr-10">
+              Measure your daily carbon footprint and take actionable steps
+              toward environmental stewardship with professional metrics and
+              real-time insights.
+            </p>
+
+            <div
+              class="flex gap-2 md:gap-4 items-center justify-center md:justify-start"
+            >
+              <a
+                href="/calculator"
+                class="px-4 md:px-6 py-3 rounded-lg font-medium bg-[#2D5A27] text-[13px] md:text-[16px] text-white mt-8 
+                transition-all duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 tracking-wide"
+                >Start Calculating</a
+              >
+              <a
+                href="#"
+                class="px-4 md:px-6 py-3 rounded-lg font-medium border border-[#2D5A27] text-[13px] md:text-[16px] text-[#2D5A27] mt-8 
+                transition-all duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 tracking-wide"
+                >Learn More</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <img
+              src="./assets/img/hero-conten.png"
+              class="w-full rounded-lg shadow-lg mt-5 md:mt-0 aspect-[4/3] object-cover"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- ABOUT -->
+      <section id="about" class="w-full bg-[#F2F4F1] py-10 md:py-20">
+        <div
+          class="max-w-7xl px-6 mx-auto grid grid-cols-1 md:grid-cols-2 md:gap-10 gap-8"
+        >
+        <div class="text content text-center md:text-left">
+        <h1 class="text-3xl text-[#064E3B] font-semibold">Why Track?</h1>
+        
+        <div class="border-l-[6px] border-[#BA1A1A] w-full max-w-md  p-5 mt-8 bg-[#FFDAD64D] rounded-lg mx-auto md:mx-0">
+          <h1 class="text-xl text-[#064E3B] text-[#BA1A1A]"><i class="ri-alert-fill px-4"></i> Carbon Alert</h1>
+          <p class="md:ml-14 md:mr-15">Global CO2 levels are at an all-time high. Individual
+          stewardship is no longer optional—it is essential.</p>
+        </div>
+        <p class="mt-8 text-lg font-light tracking-wide">The climate crisis is a complex data problem. By quantifying our
+        impact, we bridge the gap between overwhelmed inaction and
+        focused empowerment. Eco-Track provides the structured
+        environment needed to monitor, manage, and mitigate your
+        personal carbon legacy.</p>
+        </div>
+
+        <div class="konten grid grid-cols-2 md:grid-cols-2 gap-8">
+          <div class="">
+          <div class="flex flex-col text-[#154212] justify-end min-h-[230px] max-w-sm p-8 bg-[#C2C9BB33] rounded-[30px] mt-10">
+            <i class="ri-line-chart-line text-2xl mb-3"></i>
+            <h1 class="font-semibold text-xl md:text-2xl">Data Precision</h1>
+            <p class="text-sm">Accurate calculations based on global
+              climate models.</p>
+          </div>
+
+          <div class="flex flex-col justify-end min-h-[200px] max-w-sm p-8 bg-[#154212] rounded-[30px] mt-5 text-white">
+            <h1 class="font-semibold text-xl md:text-2xl">95%</h1>
+            <p class="text-sm">Accurate calculations based on global
+              climate models  .</p>
+          </div>
+          </div>
+          <div class="">
+          <div class="flex flex-col justify-end min-h-[220px] max-w-sm p-8 bg-[#154212] rounded-[30px] mt-5 text-white">
+            <i class="ri-earth-fill text-2xl mb-3 text-[#91F78E]"></i>
+            <h1 class="font-semibold text-xl md:text-2xl">Global Impact</h1>
+            <p class="text-sm">Join a network of 500k+ stewards making
+              daily differences.</p>
+          </div>
+
+          <div class="flex flex-col justify-end text-[#154212] min-h-[250px] max-w-sm p-8 bg-[#C2C9BB33] rounded-[30px] mt-5">
+            <i class="ri-verified-badge-line text-2xl mb-3"></i>
+            <h1 class="font-semibold text-xl md:text-2xl">Certified</h1>
+            <p class="text-sm">Aligned with international environmental
+            standards.</p>
+          </div>
+          </div>
+        </div>
+      
+      </div>  
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section id="features" class="how-it-works w-full bg-[#F8FAF7] py-10 md:py-20">
+        <div
+          class="max-w-7xl px-6 mx-auto">
+          <h1 class="text-3xl font-semibold text-center">How It Works</h1>
+          <p class="text-md font-light text-center mt-4">Our three-step process simplifies complex environmental
+            data into actionable life changes.</p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+            <div class="card 1 px-10 py-13 rounded-lg bg-white drop-shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
+              <div class="logo rounded-md bg-[#BCF0AE] text-[#002201] w-max h-18 p-3">
+                <ion-icon name="car-outline" class="text-[50px]"></ion-icon>
+              </div>
+              <h1 class="text-2xl text-[#154212] font-semibold mt-5">Transport</h1>
+              <p class="text-lg text-[#154212] mt-5 font-light">Log your daily commutes, flights, and
+              public transit use. We categorize fuel
+              types and efficiency metrics
+              automatically.</p>
+              <div class="flex flex-wrap mt-5 gap-3">
+                <p class="rounded-full bg-[#ECEEEB] font-thin text-[10px] px-4 py-1">EV READY</p>
+                <p class="rounded-full bg-[#ECEEEB] font-thin text-[10px] px-4 py-1">FLIGHT TRACKER</p>
+              </div>
+            </div>
+
+            <div class="card 2 px-10 py-13 rounded-lg bg-white drop-shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
+              <div class="logo rounded-md bg-[#BCF0AE] text-[#002201] w-max h-18 p-3">
+                <ion-icon name="flash-outline" class="text-[50px]"></ion-icon>
+              </div>
+              <h1 class="text-2xl text-[#154212] font-semibold mt-5">Energy</h1>
+              <p class="text-lg text-[#154212] mt-5 font-light">Connect your utility providers or manually
+              enter consumption data to see your
+              household or office energy footprint.</p>
+              <div class="flex flex-wrap mt-5 gap-3">
+                <p class="rounded-full bg-[#ECEEEB] font-thin text-[10px] px-4 py-1">SMART CONNECT</p>
+                <p class="rounded-full bg-[#ECEEEB] font-thin text-[10px] px-4 py-1">RENEWABLES</p>
+              </div>
+            </div>
+
+            <div class="card 3H px-10 py-13 rounded-lg bg-white drop-shadow-md transition-all 
+            duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
+              <div class="logo rounded-md bg-[#BCF0AE] text-[#002201] w-max h-18 p-3">
+                <ion-icon name="sparkles-outline" class="text-[50px]"></ion-icon>
+              </div>
+              <h1 class="text-2xl text-[#154212] font-semibold mt-5">Results</h1>
+              <p class="text-lg text-[#154212] mt-5 font-light">Receive detailed visualizations and a
+              Stewardship Score, identifying exactly
+              where you can reduce impact.</p>
+              <div class="flex flex-wrap mt-5 gap-3">
+                <p class="rounded-full bg-[#ECEEEB] font-thin text-[10px] px-4 py-1">DAILY REPORT</p>
+                <p class="rounded-full bg-[#ECEEEB] font-thin text-[10px] px-4 py-1">FORECASTING</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </section>
+      <!-- PROGRESS -->
+      <section id="impact" class="progress-section w-full bg-white py-10 md:py-20">
+        <div
+          class="max-w-7xl px-6 mx-auto">
+          <div class="flex flex-col md:flex-row gap-10">
+            <div class="rounded-[30px] py-7 px-8 bg-[#154212] text-white w-full">
+              <h1 class="text-2xl font-regular">Real-Time Impact Feedback</h1>
+              <p class=" font-thin mt-3 leading-relaxed tracking-wide">Our algorithm doesn't just show numbers, it shows progress.
+              <br>Watch your dashboard turn green as you reach sustainability
+              milestones.</p>
+              
+              <!-- PROGRESS BAR -->
+              <div class="flex justify-between items-end mt-8">
+                <span class="text-md md:text-lg uppercase font-regular">Your monthly progress</span>
+                <span class="text-sm md:text-xl font-semibold leading-none" id="monthly-percent">0%</span>
+              </div>
+
+              <div class="w-full h-3 bg-white/20 rounded-full overflow-hidden mt-3">      
+                <div id="monthly-progress-bar" class="h-full bg-[#8FE88B] rounded-full transition-all duration-500 w-[0%]">
+                </div>
+              </div>
+
+              <!-- BUTTON RESET PROGRESS -->
+              <button id="btn-reset-monthly" class="mt-4 text-[13px] md:text-sm uppercase tracking-widest text-white/50 hover:text-white/90 transition-colors cursor-pointer">
+                <i class="ri-restart-line"></i> Reset Monthly Data
+              </button>
+            </div>
+            
+            <div class="w-full border-[1px] border-[#4C332A1A] md:max-w-md w-auto h-full md:min-h-[40px]  p-5 bg-[#FFDBCE] rounded-[30px] mx-auto md:mx-0">
+              <i class="ri-lightbulb-fill text-3xl text-[#2B160F]"></i>
+              <h1 class="text-xl text-[#2B160F]">Smart Tip</h1>
+              <p class="text-[#2B160F] mt-2">Global CO2 levels are at an all-time high. Individual
+              stewardship is no longer optional—it is essential.</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col lg:flex-row justify-between gap-6 mt-10">
+            <div class="flex flex-col justify-end w-full lg:w-[38%] min-h-[320px] p-8 rounded-[30px] drop-shadow-sm text-[#154212] 
+            bg-[linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.9)),url(./assets/img/bg2.png)] bg-cover bg-center bg-no-repeat">
+              <h1 class="font-semibold text-2xl">Local Insights</h1>
+              <p class="text-sm mt-2 leading-relaxed">View low-carbon routes and local community gardens near you.</p>
+            </div>
+
+            <div class="flex-1 grid grid-cols-2 lg:grid-cols-4 gap-4">
+
+              <div class="flex flex-col justify-center items-center rounded-[30px] bg-[#E9EBE8] p-6 
+              transition-all duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 drop-shadow-sm min-h-[250px] lg:min-h-full">
+                <h1 class="text-4xl font-medium text-[#154212]">12.4</h1>
+                <p class="text-[10px] uppercase font-medium mt-2 tracking-widest text-[#154212]">TONS OFFSET</p>
+              </div>
+
+              <div class="flex flex-col justify-center items-center rounded-[30px] bg-[#91F884] p-6 
+              transition-all duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 drop-shadow-sm min-h-[250px] lg:min-h-full">
+                <h1 class="text-4xl font-medium text-[#154212]">240</h1>
+                <p class="text-[10px] uppercase font-medium mt-2 tracking-widest text-[#154212]">TREES SAVED</p>
+              </div>
+
+              <div class="flex flex-col justify-center items-center rounded-[30px] bg-[#E9EBE8] p-6 
+              transition-all duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 drop-shadow-sm min-h-[250px] lg:min-h-full">
+                <h1 class="text-4xl font-medium text-[#154212]">850</h1>
+                <p class="text-[10px] uppercase font-medium mt-2 tracking-widest text-[#154212]">LBS RECYCLED</p>
+              </div>
+
+              <div class="flex flex-col justify-center items-center rounded-[30px] bg-[#C1F6AA] p-6 
+              transition-all duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 drop-shadow-sm min-h-[250px] lg:min-h-full">
+                <h1 class="text-4xl font-medium text-[#154212]">A+</h1>
+                <p class="text-[10px] uppercase font-medium mt-2 tracking-widest text-[#154212]">ECO RATING</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- BUTTON START -->
+      <section class="final-button w-full bg-[#F8FAF7] py-10 md:py-20">
+        <div
+          class="max-w-7xl px-6 mx-auto items-center justify-center h-full flex">
+          <div class="rounded-[30px] w-auto px-8 py-10 bg-[#2D5A27] drop-shadow-lg text-center">
+            <h1 class="text-3xl font-semibold text-white">Ready to lead the change?</h1>
+            <p class="text-sm text-white py-3 px-8 font-thin tracking-wide leading-relaxed">Join thousands of individuals taking 
+              data-driven steps toward a healthier planet today.</p>
+            <a href="/calculator" class="py-4 px-6 mt-3 bg-white text-[#154212] inline-block
+            transition-all duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 rounded-[10px]">
+            Start Calculating Now</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <!-- FOOTER -->
+    <footer id="footer" class="w-full bg-[#E7E5E4]">
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-3 justify-between py-4 px-6"
+      >
+      <div class="flex-col text-center md:text-left">
+        <h1 class="text-lg font-semibold text-[#065F46] py-[2px]">Eco-Track</h1>
+        <p class="text-sm font-light tracking-wide text-[#78716C]">&copy; 2024 Eco-Track. Stewardship through data.</p>
+      </div>
+
+      <ul class="md:flex hidden md:block gap-4 text-sm text-[#78716C] tracking-wide">
+        <li>
+          <a href="#" class="font-light hover:text-black">Privacy Policy</a>
+        </li>
+
+        <li>
+          <a href="#" class="font-light hover:text-black">Terms of Service</a>
+        </li>
+
+        <li>
+          <a href="#" class="font-light hover:text-black">Contact Us</a>
+        </li>
+
+        <li>
+          <a href="#" class="font-light hover:text-black">Resource</a>
+        </li>
+      </ul>
+
+      <div class="md:flex gap-5 md:gap-3 text-2xl md:text-md text-[#78716C]">
+        <i class="ri-earth-line hover:text-black"></i>
+        <i class="ri-global-line hover:text-black"></i>
+      </div>
+      </div>
+    </footer>
+
+    <!-- JS EXTERNAL -->
+    <script src="main.js"></script>
+  </body>
+</html>

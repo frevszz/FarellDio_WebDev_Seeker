@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eco-Track</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../style.css" />
+
+    <!-- TAILWIND -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- REMIX ICONS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- IONICONS -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav id="navbar" class="navbar w-full bg-white sticky top-0 z-50">
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6"
+      >
+        <!-- LOGO -->
+        <div class="logo text-xl md:text-2xl font-bold text-[#064E3B]">
+          <h1>Eco-Track</h1>
+        </div>
+
+        <!-- LOGIN -->
+        <div class="login text-[12px] md:text-[15px]">
+          <a href="#" class="px-4 py-2 font-semibold">Login</a>
+          <a
+            href="#"
+            class="px-4 md:px-6 py-2 rounded-lg font-semibold bg-[#2D5A27] text-white"
+            >Get Started</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section id="calculator" class="w-full bg-[#F8FAF7] py-8">
+        <div class="max-w-7xl px-6 mx-auto">
+          <!-- TOMBOL BACK   -->
+          <button
+            onclick="window.history.back()"
+            class="flex font-semibold hover:font-bold items-center gap-1 text-md cursor-pointer text-[#154212] mb-5"
+          >
+            <ion-icon name="arrow-back-outline"></ion-icon>
+            Back
+          </button>
+
+          <h1
+            class="text-3xl font-bold text-[#154212] tracking-wide text-center md:text-left"
+          >
+            Action Plan
+          </h1>
+          <p
+            class="text-md font-light mt-3 text-center md:text-left text-[#42493E]"
+          >
+            Small steps lead to big changes. Check the actions you've taken
+            today to help reduce your carbon footprint.
+          </p>
+
+          <!-- KATA-KATA MOTIVASI -->
+          <div
+            class="w-full border-[1px] border-[#66BB6A] md:max-w-xl h-full mt-5 md:min-h-[40px] p-5 bg-[#E8F5E9] rounded-[20px] mx-auto md:mx-0"
+          >
+            <i class="ri-bard-fill text-3xl text-[#2B160F]"></i>
+            <h1 class="text-xl text-[#2B160F] font-semibold">Motivasi</h1>
+            <p
+              id="tips"
+              class="text-[#2B160F] transition duration-300 tracking-wide"
+            >
+              Mulai dari satu langkah kecil. Centang aksi pertamamu hari ini!
+            </p>
+          </div>
+
+          <!-- LIST ACTION -->
+          <div class="mt-6">
+            <div
+              class="actCard flex w-full font-semibold justify-between tracking-wide items-center mb-4 rounded-lg bg-white drop-shadow-md px-5 py-4 transition duration-300"
+            >
+              <span class="activity text-[#154212] text-lg"
+                >Memakai Sepeda</span
+              >
+              <button
+                class="btn-done w-11 h-11 rounded-lg bg-green-600 text-white hover:bg-green-700 cursor-pointer transition-all duration-300 ease-in-out hover:-translate-y-1 hover:scale-105"
+              >
+                <i class="ri-check-line text-md"></i>
+              </button>
+            </div>
+
+            <div
+              class="actCard flex w-full font-semibold justify-between tracking-wide items-center mb-4 rounded-lg bg-white drop-shadow-md px-5 py-4 transition duration-300"
+            >
+              <span class="activity text-[#154212] text-lg">Kurangi AC</span>
+              <button
+                class="btn-done w-11 h-11 rounded-lg bg-green-600 text-white hover:bg-green-700 cursor-pointer transition-all duration-300 ease-in-out hover:-translate-y-1 hover:scale-105"
+              >
+                <i class="ri-check-line text-md"></i>
+              </button>
+            </div>
+
+            <div
+              class="actCard flex w-full font-semibold justify-between tracking-wide items-center mb-4 rounded-lg bg-white drop-shadow-md px-5 py-4 transition duration-300"
+            >
+              <span class="activity text-[#154212] text-lg"
+                >Cabut Kabel tidak terpakai</span
+              >
+              <button
+                class="btn-done w-11 h-11 rounded-lg bg-green-600 text-white hover:bg-green-700 cursor-pointer transition-all duration-300 ease-in-out hover:-translate-y-1 hover:scale-105"
+              >
+                <i class="ri-check-line text-md"></i>
+              </button>
+            </div>
+
+            <div
+              class="actCard flex w-full font-semibold justify-between tracking-wide items-center mb-4 rounded-lg bg-white drop-shadow-md px-5 py-4 transition duration-300"
+            >
+              <span class="activity text-[#154212] text-lg">Menanam Pohon</span>
+              <button
+                class="btn-done w-11 h-11 rounded-lg bg-green-600 text-white hover:bg-green-700 cursor-pointer transition-all duration-300 ease-in-out hover:-translate-y-1 hover:scale-105"
+              >
+                <i class="ri-check-line text-md"></i>
+              </button>
+            </div>
+
+            <div
+              class="actCard flex w-full font-semibold justify-between tracking-wide items-center mb-4 rounded-lg bg-white drop-shadow-md px-5 py-4 transition duration-300"
+            >
+              <span class="activity text-[#154212] text-lg"
+                >Penggunaan Air secukupnya</span
+              >
+              <button
+                class="btn-done w-11 h-11 rounded-lg bg-green-600 text-white hover:bg-green-700 cursor-pointer transition-all duration-300 ease-in-out hover:-translate-y-1 hover:scale-105"
+              >
+                <i class="ri-check-line text-md"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="w-full bg-[#E7E5E4]">
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-3 justify-between py-4 px-6"
+      >
+        <div class="flex-col text-center md:text-left">
+          <h1 class="text-lg font-semibold text-[#065F46] py-[2px]">
+            Eco-Track
+          </h1>
+          <p class="text-sm font-light tracking-wide text-[#78716C]">
+            &copy; 2024 Eco-Track. Stewardship through data.
+          </p>
+        </div>
+
+        <ul
+          class="md:flex hidden md:block gap-4 text-sm text-[#78716C] tracking-wide"
+        >
+          <li>
+            <a href="#" class="font-light hover:text-black">Privacy Policy</a>
+          </li>
+
+          <li>
+            <a href="#" class="font-light hover:text-black">Terms of Service</a>
+          </li>
+
+          <li>
+            <a href="#" class="font-light hover:text-black">Contact Us</a>
+          </li>
+
+          <li>
+            <a href="#" class="font-light hover:text-black">Resource</a>
+          </li>
+        </ul>
+
+        <div class="md:flex gap-5 md:gap-3 text-2xl md:text-md text-[#78716C]">
+          <i class="ri-earth-line hover:text-black"></i>
+          <i class="ri-global-line hover:text-black"></i>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS EXTERNAL -->
+    <script src="../main.js"></script>
+  </body>
+</html>
