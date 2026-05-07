@@ -240,7 +240,7 @@ document.querySelectorAll(".btn-done").forEach(function (btn) {
     btn.classList.toggle("bg-gray-400");
 
     // HITUNG TOTAL DONE
-    totalDone += isDone ? 1 : -1; // ← di sini
+    totalDone += isDone ? 1 : -1;
     updateTip();
 
     console.log("Activity selesai: " + totalDone + "/5");
